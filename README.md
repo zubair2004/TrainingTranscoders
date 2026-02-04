@@ -1,15 +1,3 @@
-# [Paper: Attention Output Sparse Autoencoders](https://arxiv.org/abs/2406.17759)
-
-Welcome from ICML 2024! In this repository, you will find the code to
-reproduce key results accompanying "Interpreting Attention Layer Outputs
-with Sparse Autoencoders" by Kissane et al. 2024. 
-
-* [Paper](https://arxiv.org/abs/2406.17759)
-* [Blog posts](https://www.alignmentforum.org/s/FzGeLpkzDgzGhigLm)
-* [Attention Circuit Explorer](https://robertzk.github.io/circuit-explorer) ([Loom video example](https://www.loom.com/share/9836bdc0398b4178bc7ae91f0ab244a9))
-
-## Contents
-
 * `train.py` contains code to train GPT-2 Small Attention Output SAEs (Table 2).
 * `visualize_gpt2.py` contains code to generate [feature dashboards](https://ckkissane.github.io/attn-sae-gpt2-small-viz/) for GPT-2 Small. It builds on top of Callum McDougall's early [`sae_visualizer`](https://github.com/callummcdougall/sae_visualizer), but our dashboards are customized for Attention Output SAEs, and support visualization of the DFA by source position.
 * `induction_feature_deep_dive.py` contains code for the induction feature deep dive (Section 3.3), including specificity and sensitivity analysis (Figure 2). 
