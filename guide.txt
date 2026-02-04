@@ -1,0 +1,26 @@
+# if there is an installation issue then upgrade pip by running:
+ pip install --upgrade pip
+
+2. How to Run 
+train.py
+The script is a standard Python script that uses argparse to handle configuration.
+
+Basic Usage:
+
+bash
+python train.py
+Configuration & Arguments: The script defines a default configuration (default_cfg in the code) which can be overridden using command-line arguments. Each key in the configuration dictionary can be passed as a flag.
+
+Example of running with custom parameters:
+
+bash
+python train.py --model_name "gpt2-large" --batch_size 2048 --layer 10
+Important Note on Weights & Biases (WandB): The script attempts to initialize a WandB run on line 94 using wandb_project_name and wandb_entity from the config.
+
+The default values are placeholders: "your_project_name" and "your_entity_name".
+You should provide your own values to avoid errors or to log to the correct project:
+bash
+python train.py --wandb_project_name "my-sae-project" --wandb_entity "my-username"
+Alternatively, ensure you are logged in to wandb (wandb login) before running, or set the mode to offline if you don't want to sync (WANDB_MODE=offline python train.py ...).
+Data Handling: The script automatically downloads the Skylion007/openwebtext dataset (streaming) and gpt2-small model (by default) via transformer_lens. Ensure you have internet access for the initial run.
+

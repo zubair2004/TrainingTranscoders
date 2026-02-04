@@ -1,0 +1,14 @@
+transformer-lens == 2.16.1
+transformers == 4.56.2
+datasets == 4.4.2
+wandb == 0.23.1
+torch
+numpy
+plotly == 6.5.1
+einops == 0.8.1
+tqdm == 4.67.1
+pandas
+ipython
+geom-median == 0.1.0
+eindex
+
